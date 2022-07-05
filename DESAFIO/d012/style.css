@@ -7,6 +7,7 @@
 :root {
     --cor-preta: rgb(0, 0, 0);
     --cor-branca: rgb(255, 255, 255);
+    --cor-transparente: rgba(0, 0, 0, 0.527);
 
     --fonte-padrao: Verdana, Helvetica, sans-serif;
     --fonte-header: 'Passion One', cursive;    
@@ -52,10 +53,42 @@ header a:hover {
 
 /*=======================================*/
 
+section {
+    font-family: var(--fonte-conteudo);
+    font-size: 1.45em;
+}
 
+.texto {
+    padding: 0px 30px;
+    margin: 90px 0px;
+}
 
+.imagem > p {
+    color: var(--cor-branca);
+    background-color: var(--cor-transparente);
+    display: inline-block;
+    padding: 5px    ;
+}
 
+main .imagem {
+    background-color: var(--cor-branca);
+    padding: 90px 30px;
+    margin: 69px 0px;
+}
 
+main #img1 {
+    background-image: url('imagens/background001.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+main #img2 {
+    background-image: url('imagens/background002.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
 
 
 /*=======================================*/
