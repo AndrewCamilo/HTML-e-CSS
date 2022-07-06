@@ -60,6 +60,10 @@ section {
     line-height: 2em;
 }
 
+p {
+    padding-bottom: 2em;    
+}
+
 .imagem {
     background-color: var(--cor-preta);
     background-attachment: fixed;
@@ -72,7 +76,6 @@ section {
     background-color: var(--cor-transparente);
     display: inline-block;
     padding: 5px;
-    max-width: 700px;
 }
 
 #img1 {
