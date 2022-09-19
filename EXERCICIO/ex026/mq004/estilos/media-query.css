@@ -2,9 +2,51 @@
 
 /* Todas as demais mídias */
 
-@media screen and (min-width: 700px){
+/* typical Device Breakpoints
+------------------------------
+Pequenas Telas: até 600px
+Celular: de 600px até 768px
+Tablet: de 768px até 992px
+Desktop: de 992px até 1200px
+Grandes Telas: acima de 1200px   
+*/
+
+/*Impressão*/
+@media print {
+    
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
     body {
-        background: black url("../img/back-tablet.jpg") no-repeat;
+        background-image: url("../img/back-print.jpg"); /*Descnecessário*/
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita através do site www.cursoemvideo.com';
+        text-decoration: overline;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black ;
+    }
+
+    img#phone   {display: none;}
+    img#tablet  {display: none;}
+    img#print   {display: block; margin: auto;}
+    img#pc      {display: none;}
+    img#tv      {display: none;}
+}
+
+/*Tablet*/
+@media screen and (min-width: 778px) and (max-width: 992px) {
+    body {
+        background-image: url("../img/back-tablet.jpg");
         
     }
 
@@ -15,25 +57,10 @@
     img#tv      {display: none;}
 }
 
-
-@media print {
+/*Desktop*/
+@media screen and (min-width: 992px) and (Max-width: 1999px) {
     body {
-        background-color: black;
-        background-image: url("../img/back-print.jpg");
-        background-repeat: no-repeat;
-        
-    }
-
-    img#phone   {display: none;}
-    img#tablet  {display: none;}
-    img#print   {display: block; margin: auto;}
-    img#pc      {display: none;}
-    img#tv      {display: none;}
-}
-
-@media screen and (min-width: 900px) {
-    body {
-        background: black url("../img/back-pc.jpg") no-repeat;
+        background-image: url("../img/back-pc.jpg");
         background-size: cover;
         background-position: center center;
     }
@@ -45,9 +72,10 @@
     img#tv      {display: none;}
 }
 
-@media screen and (min-width: 1080px) {
+/*Grandes Telas*/
+@media screen and (min-width: 1200px) {
     body {
-        background: black url("../img/back-tv.jpg") no-repeat;
+        background-image: url("../img/back-tv.jpg");
         background-size: cover;
         background-position: center center;
     }
